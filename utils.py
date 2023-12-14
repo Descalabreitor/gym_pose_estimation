@@ -14,24 +14,4 @@ def calculate_angle(a, b, c):
 
     return angle
 
-def create_button(x, y, width, height, text, function, frame):
 
-    rect = cv2.Rect(x, y, width, height)
-
-    # Crear la imagen del botón
-    img_boton = cv2.rectangle(frame, rect, (255, 255, 255), -1)
-
-    # Escribir el texto del botón
-    cv2.putText(img_boton, text, (x + 10, y + 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0))
-
-    # Crear el evento de clic para el botón
-    cv2.setMouseCallback(img_boton, function)
-
-def calculate_speed(counter, prev_timestamp):
-    if counter > 0:
-        timestamp_diff = time.time() - prev_timestamp
-        prev_timestamp = time.time()
-
-        speed = counter / timestamp_diff
-
-        return speed, prev_timestamp
