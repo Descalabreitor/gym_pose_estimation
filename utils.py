@@ -13,8 +13,6 @@ def calculate_angle(a, b, c):
         angle = 360 - angle
 
     return angle
-<<<<<<< HEAD
-=======
 
 def create_button(x, y, width, height, text, function, frame):
 
@@ -37,4 +35,3 @@ def calculate_speed(counter, prev_timestamp):
         speed = counter / timestamp_diff
 
         return speed, prev_timestamp
->>>>>>> 06ee0167f1f2036ea0df5e45dbb132ec3e5af4bd
